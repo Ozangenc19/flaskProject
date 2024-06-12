@@ -16,16 +16,18 @@ def accueil():
 @app.route('/tous_produits')
 def produits():
     liste_produits = models.vue_produits_categories.query.all()
-    return render_template('tous_produits.html', title='Easy Clothes', liste_prod=liste_produits)
+    return render_template('tous_produits.html', title='Vêtements', liste_prod=liste_produits)
 
 
 @app.route('/creation')
 def creations():
     liste_creations = models.vue_creation.query.all()
-    return render_template('creation.html', title='Easy Clothes', liste_crea=liste_creations)
+    return render_template('creation.html', title='Creations', liste_crea=liste_creations)
 
 
 @app.route('/nouveaute')
 def nouveautes():
     liste_nouveaute = models.vue_nouveaute.query.all()
-    return render_template('nouveaute.html', title='Easy Clothes', liste_nouv=liste_nouveaute)
+    return render_template('nouveaute.html', title='Nouveautés', liste_nouv=liste_nouveaute)
+
+

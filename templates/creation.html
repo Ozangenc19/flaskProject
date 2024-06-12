@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block content %}
+<br>
+<h2>Nos Créations</h2>
+
+<div class="album py-5 bg-light">
+    <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            {% for creation in liste_crea %}
+            <div class="col">
+                <div class="card shadow-sm">
+                    <img loading="lazy" src="/static/images/{{ creation.image_creation }}" alt="image" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ creation.nom_creation }}</h5>
+                        <p class="card-text">{{ creation.description }}</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Ajouter au panier</button>
+                            </div>
+                            <small class="text-muted">{{ creation.prix_creation }} €</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock content %}

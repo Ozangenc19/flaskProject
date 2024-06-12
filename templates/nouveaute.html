@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block content %}
+<br>
+<h2>Nos Nouveautés</h2>
+
+<div class="album py-5 bg-light">
+    <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            {% for nouveaute in liste_nouv %}
+            <div class="col">
+                <div class="card shadow-sm">
+                    <img loading="lazy" src="/static/images/{{ nouveaute.image_nouveaute }}" alt="image" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ nouveaute.nom_nouveaute }}</h5>
+                        <p class="card-text">{{ nouveaute.description }}</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Ajouter au panier</button>
+                            </div>
+                            <small class="text-muted">{{ nouveaute.prix_nouveaute }} €</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock content %}

@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-black">
     <div class="container-fluid" id="menu">
         <a class="navbar-brand">Easy Clothes</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#combinedNavbar"
@@ -11,7 +11,13 @@
                     <a class="nav-link active" aria-current="page" href="{{ url_for('accueil') }}">Accueil</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('produits') }}">Nos Produits</a>
+                    <a class="nav-link" href="{{ url_for('produits') }}">Articles</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('creations') }}">Creations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('nouveautes') }}">Nouveautes</a>
                 </li>
             </ul>
         </div>
